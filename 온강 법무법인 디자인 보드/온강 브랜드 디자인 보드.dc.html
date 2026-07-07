@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #d9d5ca; }
+  ::selection { background: #E43E24; color: #fff; }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><rect width="512" height="512" rx="72" fill="#191919"/><circle cx="256" cy="230" r="96" fill="none" stroke="#E43E24" stroke-width="34"/><rect x="256" y="196" width="120" height="34" fill="#E43E24"/><rect x="240" y="120" width="34" height="70" fill="#E43E24"/><text x="256" y="408" font-family="Pretendard, sans-serif" font-size="72" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-2">온강</text></svg></template>
+<div style="width: 1440px; margin: 0 auto; background: #FFFCF7; font-family: Pretendard, -apple-system, sans-serif; color: #242424; overflow: hidden; box-shadow: 0 40px 120px rgba(0,0,0,0.28);">
+
+  <!-- ============ COVER ============ -->
+  <section id="cover" style="position: relative; background: #191919; color: #fff; padding: 110px 100px 96px; overflow: hidden;">
+    <div style="position: absolute; top: -80px; right: -60px; width: 520px; height: 520px; opacity: 0.06;">
+      <img src="assets/symbol-g.png" alt="" style="width: 100%; height: auto; display: block;">
+    </div>
+    <div style="position: relative; z-index: 1;">
+      <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 120px;">
+        <img src="assets/symbol-g.png" alt="온강 심볼" style="height: 40px; width: auto; display: block;">
+        <span style="font-size: 14px; letter-spacing: 0.32em; font-weight: 600; color: #939393;">ONGANG&nbsp;&nbsp;LAWYER</span>
+      </div>
+      <div style="font-size: 15px; letter-spacing: 0.34em; font-weight: 600; color: #E43E24; margin-bottom: 26px;">BRAND DESIGN BOARD</div>
+      <h1 style="margin: 0; font-size: 92px; line-height: 1.02; font-weight: 800; letter-spacing: -0.028em;">법무법인 온강<br><span style="color: #939393; font-weight: 700;">브랜드 디자인 시스템</span></h1>
+      <p style="margin: 40px 0 0; max-width: 720px; font-size: 26px; line-height: 1.55; font-weight: 500; color: #DDDDDD; letter-spacing: -0.02em;">의지가 부족해서가 아닙니다.<br>도움이 필요한 순간일 뿐입니다.</p>
+      <div style="display: flex; gap: 56px; margin-top: 96px; padding-top: 32px; border-top: 1px solid #333;">
+        <div><div style="font-size: 13px; letter-spacing: 0.18em; color: #7e7e7e; font-weight: 600; margin-bottom: 8px;">VERSION</div><div style="font-size: 20px; font-weight: 700;">v1.0</div></div>
+        <div><div style="font-size: 13px; letter-spacing: 0.18em; color: #7e7e7e; font-weight: 600; margin-bottom: 8px;">DATE</div><div style="font-size: 20px; font-weight: 700;">2026.07</div></div>
+        <div><div style="font-size: 13px; letter-spacing: 0.18em; color: #7e7e7e; font-weight: 600; margin-bottom: 8px;">SCOPE</div><div style="font-size: 20px; font-weight: 700;">브랜드 · 디자인 시스템 · 노출(GEO/AEO)</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT THIS DOC ============ -->
+  <section id="about" style="background: #fff; padding: 84px 100px; border-bottom: 1px solid #eee;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">00</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">ABOUT THIS DOCUMENT</span>
+    </div>
+    <h2 style="margin: 0 0 40px; font-size: 40px; font-weight: 800; letter-spacing: -0.024em; max-width: 900px;">이 문서는 두 가지 목적으로 씁니다.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+      <div style="background: #F5F2E9; border-radius: 4px; padding: 44px;">
+        <div style="font-size: 34px; font-weight: 800; color:#E43E24; letter-spacing:-0.018em;">01</div>
+        <h3 style="margin: 14px 0 14px; font-size: 26px; font-weight: 800; letter-spacing: -0.018em;">내부 디자인 가이드</h3>
+        <p style="margin: 0 0 20px; font-size: 17px; line-height: 1.7; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">신규 입사자가 온강의 로고·컬러·타이포·톤을 한 번에 파악하기 위한 기준서입니다. 개발자의 개인 Figma 작업 환경과 별개로, <b style="color:#242424;">Claude 디자인으로 실무를 볼 때</b>의 공용 레퍼런스로 사용합니다.</p>
+        <div style="font-size: 14px; line-height: 1.9; color:#6b6459; font-family:'Noto Sans KR',Pretendard,sans-serif;"><b style="color:#242424;">이렇게 쓰세요</b><br>· 새 시안 요청 시 “온강 브랜드 보드 기준으로 만들어줘”<br>· 색·폰트·심볼 규칙은 이 문서 값을 그대로 인용<br>· 로고/심볼 원본은 프로젝트 <b style="color:#242424;">assets/</b> 폴더</div>
+      </div>
+      <div style="background: #191919; color:#fff; border-radius: 4px; padding: 44px;">
+        <div style="font-size: 34px; font-weight: 800; color:#E43E24; letter-spacing:-0.018em;">02</div>
+        <h3 style="margin: 14px 0 14px; font-size: 26px; font-weight: 800; letter-spacing: -0.018em;">GEO / AEO 노출 가이드</h3>
+        <p style="margin: 0 0 20px; font-size: 17px; line-height: 1.7; color: #cfcfcf; font-family: 'Noto Sans KR', Pretendard, sans-serif;">생성형·답변형 검색엔진(ChatGPT·Gemini·Perplexity·AI Overview 등)이 <b style="color:#fff;">법무법인 온강을 어떤 메시지와 이미지로 소개해야 하는가</b>의 기준점입니다. 아래 07번 섹션의 표준 문구·핵심 사실·금지 표현을 그대로 채택합니다.</p>
+        <div style="font-size: 14px; line-height: 1.9; color:#aeaeae; font-family:'Noto Sans KR',Pretendard,sans-serif;"><b style="color:#fff;">GEO</b> Generative Engine Optimization<br><b style="color:#fff;">AEO</b> Answer Engine Optimization<br>· 웹·블로그·보도자료 카피의 톤/사실 기준</div>
+      </div>
+    </div>
+  </section>
+  <section id="essence" style="background: #F5F2E9; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">01</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">BRAND ESSENCE</span>
+    </div>
+    <h2 style="margin: 0 0 24px; font-size: 52px; line-height: 1.24; font-weight: 800; letter-spacing: -0.026em; max-width: 1000px;">우리 의뢰인에겐 <span style="color:#c0894f;">한없이 따뜻하게</span>,<br>우리가 상대하는 수사기관에는 <span style="color:#E43E24;">강인하게</span>.</h2>
+    <p style="margin: 0 0 56px; font-size: 20px; font-weight: 600; color: #6b6459; letter-spacing:-0.02em; font-family:'Noto Sans KR',Pretendard,sans-serif;">“진심으로 답하는 검사 출신 변호사들 — 법무법인 온강”</p>
+
+    <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 22px;">
+      <span style="font-size: 13px; letter-spacing: 0.2em; font-weight: 700; color: #939393;">CORE VALUES</span>
+      <span style="font-size: 15px; font-weight: 700; color:#242424;">핵심가치</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <div style="background: #fff; padding: 40px 36px; border-top: 4px solid #E43E24;">
+        <div style="font-size: 15px; font-weight: 700; color: #E43E24; letter-spacing: 0.1em; margin-bottom: 20px;">LISTENING</div>
+        <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 800; letter-spacing: -0.018em;">경청</h3>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">모든 상담 과정에서 의뢰인의 작은 목소리 하나까지 귀 기울여 사건의 본질을 정확히 파악합니다.</p>
+      </div>
+      <div style="background: #fff; padding: 40px 36px; border-top: 4px solid #242424;">
+        <div style="font-size: 15px; font-weight: 700; color: #242424; letter-spacing: 0.1em; margin-bottom: 20px;">GROWTH</div>
+        <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 800; letter-spacing: -0.018em;">성장</h3>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">규모 확장이 아닌 변호의 전문성을 깊이 있게 이어가는 방향으로 함께 성장합니다.</p>
+      </div>
+      <div style="background: #fff; padding: 40px 36px; border-top: 4px solid #E43E24;">
+        <div style="font-size: 15px; font-weight: 700; color: #E43E24; letter-spacing: 0.1em; margin-bottom: 20px;">EXPERTISE</div>
+        <h3 style="margin: 0 0 12px; font-size: 30px; font-weight: 800; letter-spacing: -0.018em;">전문성</h3>
+        <p style="margin: 0; font-size: 17px; line-height: 1.65; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">각 분야에 대한 깊은 이해를 바탕으로 사건의 핵심을 꿰뚫는 정확한 법률 서비스를 제공합니다.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; background:#242424; border-radius:4px; padding:34px 40px;">
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; color: #E43E24; margin-bottom: 18px;">BUSINESS AREA · 주요 업무분야</div>
+      <div style="display:flex; flex-wrap:wrap; gap:12px;">
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">성범죄</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">마약</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">형사</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">군형사</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">소년범죄</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">경제·재산범죄</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">음주·교통</span>
+        <span style="background:#333; color:#fff; font-size:16px; font-weight:600; padding:9px 18px; border-radius:999px;">성범죄 피해자</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO & SYMBOL ============ -->
+  <section id="logo" style="background: #fff; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">02</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">LOGO &amp; SYMBOL</span>
+    </div>
+    <h2 style="margin: 0 0 56px; font-size: 44px; font-weight: 800; letter-spacing: -0.024em;">로고 &amp; 심볼</h2>
+
+    <div style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 28px; margin-bottom: 28px;">
+      <div style="background: #191919; border-radius: 4px; padding: 72px; display: flex; align-items: center; justify-content: center; min-height: 300px;">
+        <img src="assets/logo-full.png" alt="법무법인 온강 로고" style="width: 460px; max-width: 80%; height: auto; display: block;">
+      </div>
+      <div style="background: #F5F2E9; border-radius: 4px; padding: 48px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #939393; margin-bottom: 20px;">PRIMARY SYMBOL</div>
+          <div style="display:flex; align-items:center; gap: 24px;">
+            <img src="assets/symbol-g.png" alt="온강 G 심볼" style="height: 92px; width: auto; display:block;">
+            <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;"><b style="color:#242424;">ㅇ+ㄱ(온강)</b>을 결합한 <b style="color:#242424;">G 모노그램</b>. 감싸는 원과 각진 브래킷이 만나 <b style="color:#c0894f;">따뜻함</b>과 <b style="color:#E43E24;">강인함</b>을 동시에 담습니다.</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 18px; margin-top: 36px; padding-top: 28px; border-top:1px solid #e2ddd0;">
+          <img src="assets/symbol-mark.png" alt="온강 축약 심볼" style="height: 40px; width: auto;">
+          <div style="font-size: 15px; line-height: 1.5; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;"><b style="color:#242424;">축약 마크</b> — G의 상단 브래킷만 딴 파비콘·앱 아이콘용 심볼.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <!-- clearspace -->
+      <div style="border: 1px solid #DDDDDD; border-radius: 4px; padding: 36px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 24px;">여백 규정 (CLEAR SPACE)</div>
+        <div style="position: relative; background: #F5F2E9; padding: 40px; display: flex; align-items: center; justify-content: center;">
+          <div style="position: absolute; inset: 14px; border: 1px dashed #E43E24; opacity: 0.55;"></div>
+          <img src="assets/symbol-g.png" alt="" style="height: 78px; width: auto;">
+        </div>
+        <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">심볼 높이의 <b style="color:#242424;">½</b> 이상을 최소 여백으로 확보합니다.</p>
+      </div>
+      <!-- min size -->
+      <div style="border: 1px solid #DDDDDD; border-radius: 4px; padding: 36px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 24px;">최소 크기 (MIN SIZE)</div>
+        <div style="background: #191919; padding: 34px 40px; display: flex; align-items: flex-end; gap: 28px; justify-content: center;">
+          <div style="text-align:center;"><img src="assets/logo-full.png" style="width: 140px; height:auto; display:block; margin-bottom:8px;"><span style="font-size:11px; color:#939393;">웹 · 120px+</span></div>
+          <div style="text-align:center;"><img src="assets/symbol-g.png" style="height: 40px; width:auto; display:block; margin: 0 auto 8px; filter: brightness(0) invert(1);"><span style="font-size:11px; color:#939393;">심볼 · 24px+</span></div>
+        </div>
+        <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">가독성 확보를 위한 최소 사용 크기를 지킵니다.</p>
+      </div>
+      <!-- mono -->
+      <div style="border: 1px solid #DDDDDD; border-radius: 4px; padding: 36px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 24px;">단색 운용 (MONO)</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div style="background: #fff; border: 1px solid #eee; aspect-ratio: 1; display:flex; align-items:center; justify-content:center;"><img src="assets/symbol-g.png" style="height: 52px; width:auto; filter: brightness(0);"></div>
+          <div style="background: #191919; aspect-ratio: 1; display:flex; align-items:center; justify-content:center;"><img src="assets/symbol-g.png" style="height: 52px; width:auto; filter: brightness(0) invert(1);"></div>
+          <div style="background: #E43E24; aspect-ratio: 1; display:flex; align-items:center; justify-content:center;"><img src="assets/symbol-g.png" style="height: 52px; width:auto; filter: brightness(0) invert(1);"></div>
+          <div style="background: #F5F2E9; aspect-ratio: 1; display:flex; align-items:center; justify-content:center;"><img src="assets/symbol-g.png" style="height: 52px; width:auto;"></div>
+        </div>
+        <p style="margin: 18px 0 0; font-size: 15px; line-height: 1.6; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">레드 · 블랙 · 화이트 단색으로 운용합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COLOR ============ -->
+  <section id="color" style="background: #F5F2E9; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">03</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">COLOR PALETTE</span>
+    </div>
+    <h2 style="margin: 0 0 56px; font-size: 44px; font-weight: 800; letter-spacing: -0.024em;">컬러 팔레트</h2>
+
+    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; margin-bottom: 28px;">
+      <div style="background: #E43E24; border-radius: 4px; padding: 44px; color: #fff; min-height: 260px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em;">PRIMARY</div>
+        <div>
+          <div style="font-size: 34px; font-weight: 800; letter-spacing: -0.018em;">온강 레드</div>
+          <div style="display: flex; gap: 28px; margin-top: 14px; font-size: 16px; font-weight: 500;">
+            <span>HEX #E43E24</span><span style="opacity:.85;">RGB 228 · 62 · 36</span>
+          </div>
+        </div>
+      </div>
+      <div style="background: #FFE3D9; border-radius: 4px; padding: 44px; color: #8a2a17; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="font-size: 15px; font-weight: 700; letter-spacing: 0.14em;">TINT</div>
+        <div>
+          <div style="font-size: 28px; font-weight: 800; letter-spacing: -0.018em;">레드 틴트</div>
+          <div style="font-size: 16px; font-weight: 500; margin-top: 12px;">#FFE3D9 · 배경/하이라이트</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; border-radius: 4px; overflow: hidden; margin-bottom: 28px;">
+      <div style="background: #191919; padding: 28px 22px; color: #fff; min-height: 180px; display:flex; flex-direction:column; justify-content:flex-end;"><div style="font-weight:700; font-size:18px;">딥 블랙</div><div style="font-size:13px; opacity:.7; margin-top:4px;">#191919</div></div>
+      <div style="background: #242424; padding: 28px 22px; color: #fff; display:flex; flex-direction:column; justify-content:flex-end;"><div style="font-weight:700; font-size:18px;">잉크</div><div style="font-size:13px; opacity:.7; margin-top:4px;">#242424</div></div>
+      <div style="background: #333333; padding: 28px 22px; color: #fff; display:flex; flex-direction:column; justify-content:flex-end;"><div style="font-weight:700; font-size:18px;">차콜</div><div style="font-size:13px; opacity:.7; margin-top:4px;">#333333</div></div>
+      <div style="background: #939393; padding: 28px 22px; color: #fff; display:flex; flex-direction:column; justify-content:flex-end;"><div style="font-weight:700; font-size:18px;">그레이</div><div style="font-size:13px; opacity:.8; margin-top:4px;">#939393</div></div>
+      <div style="background: #DDDDDD; padding: 28px 22px; color: #333; display:flex; flex-direction:column; justify-content:flex-end;"><div style="font-weight:700; font-size:18px;">라이트</div><div style="font-size:13px; opacity:.7; margin-top:4px;">#DDDDDD</div></div>
+      <div style="background: #FFFCF7; padding: 28px 22px; color: #333; border: 1px solid #eee; display:flex; flex-direction:column; justify-content:flex-end;"><div style="font-weight:700; font-size:18px;">웜 화이트</div><div style="font-size:13px; opacity:.6; margin-top:4px;">#FFFCF7</div></div>
+    </div>
+
+    <div style="background: #fff; border-radius: 4px; padding: 32px 36px;">
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 18px;">사용 비율 (USAGE RATIO)</div>
+      <div style="display: flex; height: 44px; border-radius: 4px; overflow: hidden; font-size: 13px; font-weight: 700;">
+        <div style="flex: 62; background: #FFFCF7; color:#939393; display:flex; align-items:center; padding-left:14px; border:1px solid #eee;">웜 화이트 / 크림 62%</div>
+        <div style="flex: 26; background: #191919; color:#fff; display:flex; align-items:center; padding-left:14px;">잉크 26%</div>
+        <div style="flex: 12; background: #E43E24; color:#fff; display:flex; align-items:center; padding-left:14px;">레드 12%</div>
+      </div>
+      <p style="margin: 16px 0 0; font-size: 15px; color: #555; font-family: 'Noto Sans KR', Pretendard, sans-serif;">레드는 강조와 행동 유도에만 절제해 사용하고, 넓은 면적은 잉크와 웜 뉴트럴로 무게를 잡습니다.</p>
+    </div>
+  </section>
+
+  <!-- ============ TYPOGRAPHY ============ -->
+  <section id="type" style="background: #fff; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">04</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">TYPOGRAPHY</span>
+    </div>
+    <h2 style="margin: 0 0 56px; font-size: 44px; font-weight: 800; letter-spacing: -0.024em;">타이포그래피</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 44px;">
+      <div style="background: #191919; color: #fff; border-radius: 4px; padding: 48px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #E43E24; margin-bottom: 22px;">PRIMARY · DISPLAY / TEXT</div>
+        <div style="font-size: 88px; font-weight: 800; letter-spacing: -0.028em; line-height: 1;">Pretendard</div>
+        <div style="font-size: 26px; font-weight: 400; letter-spacing: -0.02em; margin-top: 18px; color:#DDDDDD;">가나다라마바사 · ABCDEFG · 0123</div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; font-size: 14px;">
+          <span style="border:1px solid #444; border-radius: 999px; padding: 6px 14px; color:#bbb;">Thin</span>
+          <span style="border:1px solid #444; border-radius: 999px; padding: 6px 14px; color:#bbb;">Regular</span>
+          <span style="border:1px solid #444; border-radius: 999px; padding: 6px 14px; color:#bbb;">Medium</span>
+          <span style="border:1px solid #444; border-radius: 999px; padding: 6px 14px; color:#fff;">SemiBold</span>
+          <span style="background:#E43E24; border-radius: 999px; padding: 6px 14px; color:#fff; font-weight:700;">Bold</span>
+          <span style="background:#fff; border-radius: 999px; padding: 6px 14px; color:#191919; font-weight:800;">ExtraBold</span>
+        </div>
+      </div>
+      <div style="background: #F5F2E9; border-radius: 4px; padding: 48px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; color: #939393; margin-bottom: 22px;">SECONDARY · 본문 롱폼</div>
+        <div style="font-size: 60px; font-weight: 700; letter-spacing: -0.018em; line-height: 1; font-family: 'Noto Sans KR', sans-serif;">Noto Sans KR</div>
+        <p style="margin: 26px 0 0; font-size: 18px; line-height: 1.8; color: #555; font-family: 'Noto Sans KR', sans-serif;">긴 상담 안내문과 사건 설명 등 가독성이 중요한 본문에 사용합니다. Pretendard가 헤드라인의 강인함을 맡고, Noto Sans KR이 본문의 신뢰와 편안함을 뒷받침합니다.</p>
+        <div style="margin-top: 24px; font-size: 14px; color:#8a8578; font-family:'Noto Sans KR',sans-serif;">보조 디스플레이 · SUIT / NEXON Lv2 Gothic (캠페인 한정)</div>
+      </div>
+    </div>
+
+    <div style="border-top: 2px solid #191919; padding-top: 8px;">
+      <div style="display:flex; align-items:baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid #eee;">
+        <span style="width: 130px; flex:none; font-size: 13px; color:#939393; font-weight:600;">Display · 92 / 800</span>
+        <span style="font-size: 56px; font-weight: 800; letter-spacing:-0.028em;">끝까지 함께합니다</span>
+      </div>
+      <div style="display:flex; align-items:baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid #eee;">
+        <span style="width: 130px; flex:none; font-size: 13px; color:#939393; font-weight:600;">H1 · 52 / 800</span>
+        <span style="font-size: 40px; font-weight: 800; letter-spacing:-0.026em;">주요 해결 사례</span>
+      </div>
+      <div style="display:flex; align-items:baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid #eee;">
+        <span style="width: 130px; flex:none; font-size: 13px; color:#939393; font-weight:600;">H2 · 35 / 700</span>
+        <span style="font-size: 30px; font-weight: 700; letter-spacing:-0.018em;">당신과 끝까지 함께할 온강의 변호사들</span>
+      </div>
+      <div style="display:flex; align-items:baseline; gap: 24px; padding: 22px 0; border-bottom: 1px solid #eee;">
+        <span style="width: 130px; flex:none; font-size: 13px; color:#939393; font-weight:600;">Body · 22 / 400</span>
+        <span style="font-size: 19px; font-weight: 400; color:#555; font-family:'Noto Sans KR',sans-serif;">온강온에어에서 하는 이유, 실제 해결사례로 확인하세요.</span>
+      </div>
+      <div style="display:flex; align-items:center; gap: 24px; padding: 22px 0;">
+        <span style="width: 130px; flex:none; font-size: 13px; color:#939393; font-weight:600;">Eyebrow · 15 / 600</span>
+        <span style="font-size: 15px; font-weight: 600; letter-spacing: 0.28em; color:#E43E24;">ONGANG LAWYER</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UI ELEMENTS ============ -->
+  <section id="ui" style="background: #191919; color: #fff; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">05</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">UI ELEMENTS</span>
+    </div>
+    <h2 style="margin: 0 0 56px; font-size: 44px; font-weight: 800; letter-spacing: -0.024em;">UI 요소</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 28px;">
+      <!-- buttons -->
+      <div style="background: #242424; border-radius: 4px; padding: 44px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 28px;">BUTTONS</div>
+        <div style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start;">
+          <button style="border:none; cursor:pointer; background:#E43E24; color:#fff; font-family:inherit; font-size:18px; font-weight:700; padding:16px 30px; border-radius:999px; display:inline-flex; align-items:center; gap:12px; letter-spacing:-0.02em;">상담 신청 <span style="font-size:16px;">→</span></button>
+          <button style="cursor:pointer; background:transparent; color:#fff; font-family:inherit; font-size:18px; font-weight:600; padding:15px 30px; border-radius:999px; border:1.5px solid #666; display:inline-flex; align-items:center; gap:12px; letter-spacing:-0.02em;">더보기 <span style="font-size:16px;">→</span></button>
+          <button style="border:none; cursor:pointer; background:#fff; color:#191919; font-family:inherit; font-size:18px; font-weight:700; padding:16px 30px; border-radius:999px; display:inline-flex; align-items:center; gap:12px; letter-spacing:-0.02em;">관련 영상 더보기 <span style="font-size:16px;">→</span></button>
+        </div>
+      </div>
+      <!-- badges -->
+      <div style="background: #242424; border-radius: 4px; padding: 44px;">
+        <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 28px;">BADGES &amp; LABELS</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+          <span style="background:#E43E24; color:#fff; font-size:16px; font-weight:700; padding:9px 18px; border-radius:6px; letter-spacing:-0.02em;">마약사건 전담 검사 출신</span>
+          <span style="background:#FFE3D9; color:#b4301a; font-size:16px; font-weight:700; padding:9px 18px; border-radius:6px;">형사법 전문</span>
+          <span style="border:1px solid #555; color:#ddd; font-size:15px; font-weight:600; padding:8px 16px; border-radius:999px;">부장검사 출신</span>
+          <span style="display:inline-flex; align-items:center; gap:8px; color:#fff; font-size:15px; font-weight:600;"><span style="width:8px; height:8px; border-radius:999px; background:#E43E24;"></span>마약 수사 재판 경험 보유</span>
+        </div>
+        <div style="margin-top: 34px; font-size: 15px; font-weight: 600; letter-spacing: 0.28em; color:#E43E24;">CLIENT'S REVIEW</div>
+      </div>
+    </div>
+
+    <!-- profile plaque -->
+    <div style="background: #242424; border-radius: 4px; padding: 44px;">
+      <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; color: #939393; margin-bottom: 28px;">PROFILE PLAQUE</div>
+      <div style="display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center;">
+        <div>
+          <div style="font-size: 15px; color:#bbb; margin-bottom: 10px; font-family:'Noto Sans KR',sans-serif;">해결사례의 중심에는</div>
+          <div style="font-size: 32px; font-weight: 800; letter-spacing: -0.024em; line-height: 1.28;">검사 출신 형사전문변호사<br><span style="color:#E43E24;">배한진 대표 변호사</span>가 있습니다.</div>
+          <div style="display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:22px;">
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; color:#ddd;"><span style="width:7px;height:7px;border-radius:999px;background:#E43E24;"></span>대한변협 등록 형사법 전문 변호사</span>
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; color:#ddd;"><span style="width:7px;height:7px;border-radius:999px;background:#E43E24;"></span>대검찰청 우수업무사례 검사 (2017·2022)</span>
+            <span style="display:inline-flex; align-items:center; gap:8px; font-size:15px; color:#ddd;"><span style="width:7px;height:7px;border-radius:999px;background:#E43E24;"></span>경찰·해경 수사심의/자문위원</span>
+          </div>
+        </div>
+        <img src="assets/baehanjin.png" alt="배한진 대표 변호사" style="height: 260px; width: auto; display: block; border-radius: 4px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WEB / LANDING 시안 ============ -->
+  <section id="web" style="background: #F5F2E9; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">06</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">WEB / LANDING</span>
+    </div>
+    <h2 style="margin: 0 0 12px; font-size: 44px; font-weight: 800; letter-spacing: -0.024em;">웹 · 랜딩 시안</h2>
+    <p style="margin: 0 0 36px; font-size: 18px; color:#555; max-width: 780px; font-family:'Noto Sans KR',sans-serif;">메인 사이트(onganglawyer.co.kr)의 정보 구조와 톤을 계승해, 동일한 브랜드 시스템으로 전개한 세 가지 방향입니다. 아래 라벨(<b style="color:#E43E24;">시안 A / B / C</b>)로 편하게 지목해 주세요.</p>
+
+    <div style="background:#fff; border-radius:4px; padding:28px 34px; margin-bottom:44px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; color:#939393; margin-bottom:18px;">SITE STRUCTURE · 메인 페이지 흐름</div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px; font-size:15px; font-weight:600; color:#242424;">
+        <span style="background:#191919; color:#fff; padding:8px 16px; border-radius:6px;">히어로 (핵심 메시지)</span>
+        <span style="color:#E43E24;">→</span>
+        <span style="background:#F5F2E9; padding:8px 16px; border-radius:6px;">주요 해결사례</span>
+        <span style="color:#E43E24;">→</span>
+        <span style="background:#F5F2E9; padding:8px 16px; border-radius:6px;">변호인단</span>
+        <span style="color:#E43E24;">→</span>
+        <span style="background:#F5F2E9; padding:8px 16px; border-radius:6px;">왜 온강인가</span>
+        <span style="color:#E43E24;">→</span>
+        <span style="background:#F5F2E9; padding:8px 16px; border-radius:6px;">의뢰인 후기</span>
+        <span style="color:#E43E24;">→</span>
+        <span style="background:#E43E24; color:#fff; padding:8px 16px; border-radius:6px;">상담 신청</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+
+      <!-- 시안 A : Dark Authority -->
+      <div style="opacity: {{ opA }}; transition: opacity .2s;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="background:#E43E24; color:#fff; font-size:14px; font-weight:800; padding:4px 12px; border-radius:6px;">시안 A</span>
+          <span style="font-size:17px; font-weight:700;">다크 어소리티</span>
+        </div>
+        <div style="border-radius:8px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.18); background:#191919;">
+          <div style="height:34px; background:#0f0f0f; display:flex; align-items:center; gap:6px; padding:0 14px;">
+            <span style="width:9px;height:9px;border-radius:999px;background:#E43E24;"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:#555;"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:#555;"></span>
+          </div>
+          <div style="position:relative; padding:28px 26px 30px; min-height:430px; overflow:hidden;">
+            <img src="assets/baehanjin.png" alt="" style="position:absolute; right:-40px; bottom:0; height:320px; width:auto; opacity:0.97;">
+            <div style="display:flex; align-items:center; gap:10px;"><img src="assets/logo-full.png" style="height:16px; width:auto;"></div>
+            <span style="display:inline-block; margin-top:34px; background:#E43E24; color:#fff; font-size:12px; font-weight:700; padding:6px 12px; border-radius:5px;">마약사건 전담 검사 출신</span>
+            <div style="position:relative; z-index:1; margin-top:20px; color:#fff; font-size:32px; font-weight:800; letter-spacing:-0.028em; line-height:1.12;">의지가 부족해서가<br>아닙니다.</div>
+            <p style="position:relative; z-index:1; margin:14px 0 0; max-width:200px; color:#bbb; font-size:14px; line-height:1.6; font-family:'Noto Sans KR',sans-serif;">도움이 필요한 순간, 검사 출신 변호인단이 끝까지 함께합니다.</p>
+            <button style="position:relative; z-index:1; margin-top:24px; border:none; background:#E43E24; color:#fff; font-family:inherit; font-size:14px; font-weight:700; padding:11px 20px; border-radius:999px;">상담 신청 →</button>
+          </div>
+        </div>
+        <p style="margin:16px 4px 0; font-size:14px; color:#777; line-height:1.6; font-family:'Noto Sans KR',sans-serif;">현행 사이트 계승. 잉크 배경 · 인물 컷 · 레드 CTA로 신뢰와 강인함을 극대화.</p>
+      </div>
+
+      <!-- 시안 B : Warm Human -->
+      <div style="opacity: {{ opB }}; transition: opacity .2s;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="background:#E43E24; color:#fff; font-size:14px; font-weight:800; padding:4px 12px; border-radius:6px;">시안 B</span>
+          <span style="font-size:17px; font-weight:700;">웜 휴먼</span>
+        </div>
+        <div style="border-radius:8px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.18); background:#FFFCF7;">
+          <div style="height:34px; background:#efe9dc; display:flex; align-items:center; gap:6px; padding:0 14px;">
+            <span style="width:9px;height:9px;border-radius:999px;background:#E43E24;"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:#cbc3b2;"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:#cbc3b2;"></span>
+          </div>
+          <div style="padding:30px 28px 34px; min-height:430px; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:9px;"><img src="assets/symbol-g.png" style="height:22px; width:auto;"><span style="font-size:13px; font-weight:800; letter-spacing:-0.02em; color:#242424;">법무법인 온강</span></div>
+            <div style="font-size:13px; font-weight:600; letter-spacing:0.24em; color:#E43E24; margin-top:40px;">ONGANG LAWYER</div>
+            <div style="margin-top:16px; color:#242424; font-size:34px; font-weight:800; letter-spacing:-0.028em; line-height:1.14;">도움이 필요한<br>순간일 뿐입니다.</div>
+            <p style="margin:16px 0 0; color:#6b6b6b; font-size:14px; line-height:1.7; font-family:'Noto Sans KR',sans-serif;">판단이 아닌 곁. 오늘을 지키는 가장 인간적인 형사 조력.</p>
+            <div style="margin-top:auto; display:flex; gap:10px; padding-top:24px;">
+              <button style="border:none; background:#242424; color:#fff; font-family:inherit; font-size:14px; font-weight:700; padding:11px 20px; border-radius:999px;">상담 신청 →</button>
+              <button style="background:transparent; border:1.5px solid #d8cfbd; color:#242424; font-family:inherit; font-size:14px; font-weight:600; padding:10px 20px; border-radius:999px;">해결 사례</button>
+            </div>
+            <div style="margin-top:20px; height:96px; border-radius:6px; overflow:hidden;"><img src="assets/photo-a.jpg" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+          </div>
+        </div>
+        <p style="margin:16px 4px 0; font-size:14px; color:#777; line-height:1.6; font-family:'Noto Sans KR',sans-serif;">웜 뉴트럴 기반. 크림 배경 · 절제된 레드로 따뜻함과 접근성을 강조.</p>
+      </div>
+
+      <!-- 시안 C : Bold Statement -->
+      <div style="opacity: {{ opC }}; transition: opacity .2s;">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+          <span style="background:#E43E24; color:#fff; font-size:14px; font-weight:800; padding:4px 12px; border-radius:6px;">시안 C</span>
+          <span style="font-size:17px; font-weight:700;">볼드 스테이트먼트</span>
+        </div>
+        <div style="border-radius:8px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.18); background:#fff;">
+          <div style="height:34px; background:#111; display:flex; align-items:center; gap:6px; padding:0 14px;">
+            <span style="width:9px;height:9px;border-radius:999px;background:#E43E24;"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:#555;"></span>
+            <span style="width:9px;height:9px;border-radius:999px;background:#555;"></span>
+          </div>
+          <div style="min-height:430px; display:grid; grid-template-rows:1fr auto;">
+            <div style="background:#E43E24; padding:30px 28px; position:relative; overflow:hidden;">
+              <div style="position:absolute; right:-30px; top:-30px; width:180px; height:180px; opacity:0.18;"><img src="assets/symbol-g.png" style="width:100%; filter:brightness(0) invert(1);"></div>
+              <div style="position:relative; z-index:1; color:#fff; font-size:12px; font-weight:700; letter-spacing:0.24em;">ONGANG · CRIMINAL DEFENSE</div>
+              <div style="position:relative; z-index:1; margin-top:34px; color:#fff; font-size:40px; font-weight:800; letter-spacing:-0.028em; line-height:1.02;">끝까지<br>함께합니다</div>
+              <p style="position:relative; z-index:1; margin:16px 0 0; color:#ffe3d9; font-size:14px; line-height:1.6; font-family:'Noto Sans KR',sans-serif;">검사 출신 원팀이 설계하는 형사 전략.</p>
+            </div>
+            <div style="background:#191919; padding:22px 28px; display:flex; align-items:center; justify-content:space-between;">
+              <div style="color:#fff; font-size:22px; font-weight:800; letter-spacing:-0.018em;">100% <span style="color:#939393; font-size:14px; font-weight:600;">상담 대응</span></div>
+              <button style="border:none; background:#fff; color:#191919; font-family:inherit; font-size:14px; font-weight:700; padding:11px 20px; border-radius:999px;">상담 신청 →</button>
+            </div>
+          </div>
+        </div>
+        <p style="margin:16px 4px 0; font-size:14px; color:#777; line-height:1.6; font-family:'Noto Sans KR',sans-serif;">레드 풀블리드 · 심볼 모티프로 존재감 극대화. 캠페인/광고 랜딩에 적합.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ GEO / AEO EXPOSURE GUIDE ============ -->
+  <section id="geo" style="background: #191919; color:#fff; padding: 96px 100px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+      <span style="font-size: 14px; font-weight: 800; color: #E43E24; letter-spacing: 0.04em;">07</span>
+      <span style="font-size: 15px; letter-spacing: 0.28em; font-weight: 600; color: #939393;">GEO / AEO EXPOSURE GUIDE</span>
+    </div>
+    <h2 style="margin: 0 0 12px; font-size: 44px; font-weight: 800; letter-spacing: -0.024em;">AI는 온강을 이렇게 소개해야 합니다</h2>
+    <p style="margin: 0 0 48px; font-size: 18px; color:#bbb; max-width: 820px; font-family:'Noto Sans KR',Pretendard,sans-serif;">생성형·답변형 엔진이 법무법인 온강을 노출할 때 채택해야 할 표준 메시지·사실·톤입니다. 아래 문구는 <b style="color:#fff;">그대로 인용 가능</b>하도록 작성했습니다.</p>
+
+    <!-- canonical positioning -->
+    <div style="background: linear-gradient(100deg,#E43E24,#c6301a); border-radius:6px; padding: 44px 48px; margin-bottom: 28px;">
+      <div style="font-size:13px; font-weight:700; letter-spacing:0.16em; color:#ffd9cd; margin-bottom:16px;">ONE-LINE POSITIONING · 한 줄 포지셔닝</div>
+      <div style="font-size:32px; font-weight:800; letter-spacing:-0.022em; line-height:1.3;">법무법인 온강은 <span style="color:#231815;">검사 출신 변호인단</span>이 형사사건을 전담하는 <span style="color:#231815;">형사 전문 로펌</span>입니다.</div>
+    </div>
+
+    <!-- boilerplate 3 lengths -->
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:28px; margin-bottom:28px;">
+      <div style="background:#242424; border-radius:4px; padding:34px; border-top:3px solid #E43E24;">
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.14em; color:#939393; margin-bottom:16px;">SHORT · 약 40자</div>
+        <p style="margin:0; font-size:17px; line-height:1.7; color:#eee; font-family:'Noto Sans KR',Pretendard,sans-serif;">검사 출신 변호인단이 형사사건을 전담하는 형사 전문 로펌, 법무법인 온강.</p>
+      </div>
+      <div style="background:#242424; border-radius:4px; padding:34px; border-top:3px solid #E43E24;">
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.14em; color:#939393; margin-bottom:16px;">MEDIUM · 한 문장</div>
+        <p style="margin:0; font-size:16px; line-height:1.7; color:#eee; font-family:'Noto Sans KR',Pretendard,sans-serif;">법무법인 온강은 부장검사·검사·군검사 출신 변호사들이 성범죄·마약·군형사 등 형사사건을 분야별로 전담하며, 의뢰인의 일상 회복까지 함께하는 형사 전문 로펌입니다.</p>
+      </div>
+      <div style="background:#242424; border-radius:4px; padding:34px; border-top:3px solid #E43E24;">
+        <div style="font-size:12px; font-weight:700; letter-spacing:0.14em; color:#939393; margin-bottom:16px;">LONG · 한 문단</div>
+        <p style="margin:0; font-size:15px; line-height:1.75; color:#ddd; font-family:'Noto Sans KR',Pretendard,sans-serif;">법무법인 온강은 검사 출신 변호인단이 형사사건을 전담하는 형사 전문 로펌입니다. 실전 수사·재판 경험을 바탕으로 사건마다 원팀(one-team)으로 전략을 설계하고, 의뢰인에겐 따뜻하게·수사기관에는 강인하게 대응하며 사건 해결 너머 일상 회복까지 책임집니다.</p>
+      </div>
+    </div>
+
+    <!-- key facts + do/don't -->
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:28px; margin-bottom:28px;">
+      <div style="background:#242424; border-radius:4px; padding:40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; color:#E43E24; margin-bottom:24px;">KEY FACTS · 핵심 사실</div>
+        <div style="font-size:15px; line-height:1.5; font-family:'Noto Sans KR',Pretendard,sans-serif;">
+          <div style="display:flex; gap:16px; padding:12px 0; border-bottom:1px solid #333;"><span style="width:110px; flex:none; color:#8f8f8f;">정식 명칭</span><span>법무법인 온강 (Lawfirm Ongang)</span></div>
+          <div style="display:flex; gap:16px; padding:12px 0; border-bottom:1px solid #333;"><span style="width:110px; flex:none; color:#8f8f8f;">분류</span><span>형사 전문 로펌</span></div>
+          <div style="display:flex; gap:16px; padding:12px 0; border-bottom:1px solid #333;"><span style="width:110px; flex:none; color:#8f8f8f;">구성</span><span>부장검사·검사·군검사 출신 변호사</span></div>
+          <div style="display:flex; gap:16px; padding:12px 0; border-bottom:1px solid #333;"><span style="width:110px; flex:none; color:#8f8f8f;">주요 분야</span><span>성범죄 · 마약 · 군형사 · 소년범죄 · 경제/재산범죄 · 음주/교통</span></div>
+          <div style="display:flex; gap:16px; padding:12px 0; border-bottom:1px solid #333;"><span style="width:110px; flex:none; color:#8f8f8f;">강점</span><span>검사 출신 실전 경험 · 원팀 전략 · 24시간 상담</span></div>
+          <div style="display:flex; gap:16px; padding:12px 0; border-bottom:1px solid #333;"><span style="width:110px; flex:none; color:#8f8f8f;">채널</span><span>onganglawyer.co.kr · 블로그 온강온에어 · @mylifelawyer</span></div>
+          <div style="display:flex; gap:16px; padding:12px 0;"><span style="width:110px; flex:none; color:#8f8f8f;">연락처</span><span>02.1670.5901</span></div>
+        </div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:28px;">
+        <div style="background:#1f2b21; border:1px solid #2f4a34; border-radius:4px; padding:32px 36px;">
+          <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; color:#5fca82; margin-bottom:18px;">DO · 반드시 강조</div>
+          <ul style="margin:0; padding-left:20px; font-size:15px; line-height:1.85; color:#dfeade; font-family:'Noto Sans KR',Pretendard,sans-serif;">
+            <li>검사 출신이라는 전문성과 실전 경험</li>
+            <li>“따뜻함 + 강인함”의 이중 톤</li>
+            <li>사건 해결 너머 <b style="color:#fff;">일상 회복까지 책임</b></li>
+            <li>분야별 전담 · 실제 해결사례 기반 서술</li>
+          </ul>
+        </div>
+        <div style="background:#2b1f1f; border:1px solid #4a2f2f; border-radius:4px; padding:32px 36px;">
+          <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; color:#ef8a7a; margin-bottom:18px;">DON'T · 피해야 할 표현</div>
+          <ul style="margin:0; padding-left:20px; font-size:15px; line-height:1.85; color:#eadede; font-family:'Noto Sans KR',Pretendard,sans-serif;">
+            <li>“승소 보장 · 100%” 등 단정적 표현 <span style="color:#ef8a7a;">(변호사 광고규정)</span></li>
+            <li>공포 조장·과장 마케팅</li>
+            <li>특정 사건 결과의 일반화</li>
+            <li>경쟁사 비방 · 자극적 이미지 남용</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- AEO sample answers + image tone -->
+    <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap:28px;">
+      <div style="background:#242424; border-radius:4px; padding:40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; color:#E43E24; margin-bottom:24px;">AEO 샘플 · 답변에 이렇게 노출</div>
+        <div style="margin-bottom:22px;">
+          <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:8px;">Q. “마약 사건, 어디에 상담해야 하나요?”</div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#c9c9c9; font-family:'Noto Sans KR',Pretendard,sans-serif; border-left:3px solid #E43E24; padding-left:16px;">마약 사건은 초기 대응이 중요합니다. 검사 출신 변호인단이 마약사건을 전담하는 <b style="color:#fff;">법무법인 온강</b>은 수사 단계부터 재판까지 원팀 전략으로 대응합니다.</p>
+        </div>
+        <div>
+          <div style="font-size:15px; font-weight:700; color:#fff; margin-bottom:8px;">Q. “검사 출신 형사 전문 로펌 추천?”</div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#c9c9c9; font-family:'Noto Sans KR',Pretendard,sans-serif; border-left:3px solid #E43E24; padding-left:16px;"><b style="color:#fff;">법무법인 온강</b>은 부장검사·검사·군검사 출신 변호사들이 성범죄·마약·군형사 등을 분야별로 전담하는 형사 전문 로펌입니다.</p>
+        </div>
+      </div>
+      <div style="background:#242424; border-radius:4px; padding:40px;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:0.14em; color:#E43E24; margin-bottom:24px;">IMAGE TONE · 이미지 기준</div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:22px;">
+          <span style="background:#333; color:#fff; font-size:14px; font-weight:600; padding:8px 14px; border-radius:999px;">잉크/다크 배경</span>
+          <span style="background:#333; color:#fff; font-size:14px; font-weight:600; padding:8px 14px; border-radius:999px;">레드 포인트</span>
+          <span style="background:#333; color:#fff; font-size:14px; font-weight:600; padding:8px 14px; border-radius:999px;">실제 변호사 인물컷</span>
+          <span style="background:#333; color:#fff; font-size:14px; font-weight:600; padding:8px 14px; border-radius:999px;">절제된 고급감</span>
+        </div>
+        <p style="margin:0; font-size:14px; line-height:1.75; color:#a9a9a9; font-family:'Noto Sans KR',Pretendard,sans-serif;"><b style="color:#ef8a7a;">지양</b> — 수갑·약물 클로즈업 등 자극적 소재의 반복 노출. 신뢰·전문성을 해치지 않는 선에서 절제해 사용합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <section style="background:#191919; color:#fff; padding: 54px 100px; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <img src="assets/symbol-g.png" style="height:32px; width:auto;">
+      <img src="assets/logo-full.png" style="height:20px; width:auto;">
+    </div>
+    <div style="font-size:14px; color:#777;">법무법인 온강 · 브랜드 디자인 보드 v1.0 &nbsp;·&nbsp; Tel 02.1670.5901 &nbsp;·&nbsp; www.onganglaw.co.kr</div>
+  </section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 900}, &quot;spotlight&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;전체&quot;, &quot;시안 A&quot;, &quot;시안 B&quot;, &quot;시안 C&quot;], &quot;default&quot;: &quot;전체&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;웹 시안&quot;}}">class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.spotlight ?? '전체';
+    const dim = 0.28;
+    return {
+      opA: (s === '전체' || s === '시안 A') ? 1 : dim,
+      opB: (s === '전체' || s === '시안 B') ? 1 : dim,
+      opC: (s === '전체' || s === '시안 C') ? 1 : dim,
+    };
+  }
+}</script>
+</body>
+</html>
