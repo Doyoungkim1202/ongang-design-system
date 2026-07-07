@@ -1,0 +1,65 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Core — 버튼·배지·칩·프로필" subtitle="온강 UI 프리미티브" -->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 28px; background: var(--surface-page); font-family: var(--font-head); }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px; }
+  .lbl { font-size: 11px; letter-spacing: .14em; color: var(--ongang-gray); font-weight: 700; margin: 22px 0 8px; }
+  .dark { background: var(--surface-dark); padding: 20px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+  // 번들 네임스페이스 자동 탐색
+  function findNS(names) {
+    for (const k of Object.keys(window)) {
+      const v = window[k];
+      if (v && typeof v === 'object' && names.every(n => typeof v[n] === 'function')) return v;
+    }
+    return {};
+  }
+  const NS = findNS(['Button', 'Badge', 'Chip', 'ProfileCard']);
+  const { Button, Badge, Chip, Eyebrow, SectionHeader, ProfileCard } = NS;
+
+  function Demo() {
+    return (
+      <div>
+        <div className="lbl">BUTTON</div>
+        <div className="row">
+          <Button variant="primary">상담 신청</Button>
+          <Button variant="dark">더보기</Button>
+          <Button variant="light">관련 영상</Button>
+          <Button variant="outline" withArrow={false}>취소</Button>
+        </div>
+        <div className="lbl">BADGE</div>
+        <div className="row">
+          <Badge tone="solid">마약사건 전담 검사 출신</Badge>
+          <Badge tone="soft">형사법 전문</Badge>
+          <Badge tone="outline">부장검사 출신</Badge>
+        </div>
+        <div className="lbl">CHIP</div>
+        <div className="row">
+          <Chip active>마약 변호사</Chip>
+          <Chip>음주운전 초범</Chip>
+          <Chip>성범죄</Chip>
+          <Chip>군형사</Chip>
+        </div>
+        <div className="lbl">EYEBROW</div>
+        <div className="row"><Eyebrow index="03" label="COLOR PALETTE" kr="컬러 팔레트" /></div>
+        <div className="lbl">PROFILE CARD</div>
+        <ProfileCard photo="../../assets/ds/lawyer-baehanjin.png" />
+      </div>
+    );
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

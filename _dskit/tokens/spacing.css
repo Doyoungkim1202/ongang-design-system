@@ -1,0 +1,32 @@
+/* 온강 디자인 시스템 — 스페이싱·형태 토큰 */
+:root {
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 28px;
+  --space-7: 40px;
+  --space-8: 56px;
+  --space-9: 72px;
+  --space-10: 96px;
+
+  /* Section padding (full-bleed sections) */
+  --section-pad-y: 96px;
+  --section-pad-x: 100px;
+
+  /* Radius — restrained, mostly sharp */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-width: 1px;
+  --accent-bar: 4px;
+
+  /* Shadows */
+  --shadow-card: 0 20px 50px rgba(0,0,0,0.18);
+  --shadow-float: 0 30px 70px rgba(0,0,0,0.18);
+}

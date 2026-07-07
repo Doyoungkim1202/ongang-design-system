@@ -1,0 +1,36 @@
+/* 온강 디자인 시스템 — 타이포그래피 토큰 */
+:root {
+  /* Families */
+  --font-head: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Noto Sans KR', 'Pretendard', sans-serif;
+
+  /* Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Display / heading scale (px) */
+  --fs-display: 84px;
+  --fs-h1: 52px;
+  --fs-h2: 40px;
+  --fs-h3: 30px;
+  --fs-title: 22px;
+  --fs-body-lg: 19px;
+  --fs-body: 17px;
+  --fs-small: 15px;
+  --fs-caption: 13px;
+
+  /* Tracking — tight Korean display */
+  --track-display: -0.028em;
+  --track-heading: -0.024em;
+  --track-tight: -0.018em;
+  --track-eyebrow: 0.28em;
+  --track-label: 0.14em;
+
+  /* Line height */
+  --lh-tight: 1.14;
+  --lh-heading: 1.24;
+  --lh-body: 1.7;
+}

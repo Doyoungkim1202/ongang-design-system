@@ -1,0 +1,32 @@
+/* 온강 디자인 시스템 — 컬러 토큰 */
+:root {
+  /* Base — Primary */
+  --ongang-red: #E43E24;
+  --ongang-red-tint: #FFE3D9;
+
+  /* Base — Neutrals (warm ink → cream) */
+  --ongang-black: #191919;
+  --ongang-ink: #242424;
+  --ongang-charcoal: #333333;
+  --ongang-gray: #939393;
+  --ongang-light: #DDDDDD;
+  --ongang-cream: #F5F2E9;
+  --ongang-warm-white: #FFFCF7;
+  --ongang-gold: #C9A06A;
+
+  /* Semantic aliases */
+  --color-accent: var(--ongang-red);
+  --color-accent-soft: var(--ongang-red-tint);
+  --text-strong: var(--ongang-ink);
+  --text-body: #555555;
+  --text-muted: var(--ongang-gray);
+  --text-on-dark: #ffffff;
+  --text-on-dark-muted: #bbbbbb;
+  --surface-page: var(--ongang-warm-white);
+  --surface-card: #ffffff;
+  --surface-warm: var(--ongang-cream);
+  --surface-dark: var(--ongang-black);
+  --surface-dark-raised: var(--ongang-ink);
+  --border-hairline: var(--ongang-light);
+  --border-dark: #333333;
+}
